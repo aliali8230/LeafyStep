@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeafyStep🌿</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-8 md:p-8">
+
+    <svg class="leaf-decor top-0 left-0 w-64 h-64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#597445" d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.7,-31.3,87.1,-15.7,85.5,-0.9C83.9,13.8,77.3,27.7,68.8,40.1C60.3,52.5,50,63.5,37.5,70.9C25,78.3,10.3,82.1,-4.2,89.4C-18.7,96.7,-37.4,107.5,-51.1,102.7C-64.8,97.9,-73.4,77.5,-79.8,59.3C-86.2,41.1,-90.4,25,-91.7,8.6C-93,-7.8,-91.4,-24.5,-84.1,-38.7C-76.8,-52.9,-63.8,-64.6,-49.6,-71.4C-35.4,-78.2,-20,-80.1,-3.5,-74C13,-67.9,26,-53.8,44.7,-76.4Z" transform="translate(100 100)" />
+    </svg>
+
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="mt-10 text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Leafy<span class="text-[#597445]">Step🌿</span></h1>
+            <p class="text-lg opacity-80 max-w-2xl mx-auto">Track emisi harianmu secara instan.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <div class="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                
+                <section class="glass-card p-8">
+                    <h2 class="text-xl md:text-xl font-bold mb-6 flex items-center gap-2"><span>🧩</span> Daily Activities</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-3">Tipe Kendaraan</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <button onclick="setVehicle('motor', 0.1)" id="btn-motor" class="vehicle-btn active bg-white/50 p-4 rounded-2xl flex flex-col items-center gap-2">
+                                    <span class="text-md font-bold">Motor</span>
+                                </button>
+                                <button onclick="setVehicle('mobil', 0.2)" id="btn-mobil" class="vehicle-btn bg-white/50 p-4 rounded-2xl flex flex-col items-center gap-2">
+                                    <span class="text-md font-bold">Mobil</span>
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Jarak Tempuh (km)</label>
+                            <input type="number" id="transport" oninput="predictStatus()" placeholder="0" class="w-full bg-white/50 border-2 border-[#597445]/20 p-4 rounded-2xl focus:outline-none focus:border-[#597445] transition-all">
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">AC (Jam)</label>
+                                <input type="number" id="ac" oninput="predictStatus()" placeholder="0" class="w-full bg-white/50 border-2 border-[#597445]/20 p-4 rounded-2xl focus:outline-none focus:border-[#597445] transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Laptop (Jam)</label>
+                                <input type="number" id="laptop" oninput="predictStatus()" placeholder="0" class="w-full bg-white/50 border-2 border-[#597445]/20 p-4 rounded-2xl focus:outline-none focus:border-[#597445] transition-all">
+                            </div>
+                        </div>
+    
+                        <div class="flex gap-4 pt-4">
+                            <button onclick="calculate()" class="btn-genz flex-1 bg-[#597445] text-white font-bold py-4 shadow-lg shadow-[#597445]/30">Hitung Emisi</button>
+                            <button onclick="resetAll()" class="btn-genz px-6 bg-white border-2 border-[#597445] text-[#597445] font-bold py-4">Reset</button>
+                        </div>
+                    </div>
+                </section>
+    
+                <section id="card-total" class="glass-card p-8 bg-[#597445] text-white reveal flex items-center">
+                    <div class="flex flex-col">
+                        <h2 class="text-lg md:text-xl font-bold mb-4">Total Emisi Kamu:</h2>
+                        <div class="flex items-baseline gap-2">
+                            <span id="total-display" class="text-4xl md:text-5xl lg:text-6xl font-black">0.0</span>
+                            <span class="text-lg md:text-xl font-medium opacity-80">kg CO₂e</span>
+                        </div>
+                        <p id="status-text" class="mt-4 font-medium opacity-90 italic"></p>
+                    </div>
+                </section>
+            </div>
+    
+            <div id="right-col" class="lg:col-span-7 flex flex-col gap-8">
+                <section id="card-chart" class="glass-card p-8 min-h-[350px] reveal">
+                    <div class="w-full">
+                        <h2 class="text-xl md:text-2xl font-bold mb-6">Sebaran Emisi</h2>
+                        <div id="chart-container" class="relative h-64 w-full"></div>
+                    </div>
+                </section>
+    
+                <section id="card-action" class="glass-card p-8 reveal">
+                    <div class="w-full">
+                        <h2 class="text-xl md:text-2xl font-bold mb-6">Rencana Kamu 🌍</h2>
+                        <div id="motivation-box" class="hidden mb-6 p-4 bg-white/60 rounded-2xl text-[#597445] font-bold text-center animate-bounce"></div>
+                        <div class="space-y-4">
+                            <label class="flex items-center gap-4 p-4 bg-white/30 rounded-2xl cursor-pointer hover:bg-white/50 transition-all">
+                                <input type="checkbox" onchange="toggleTask(this)" class="w-6 h-6 rounded-full border-2 border-[#597445]">
+                                <span class="text-md md:text-lg">Gunakan transportasi umum besok</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 bg-white/30 rounded-2xl cursor-pointer hover:bg-white/50 transition-all">
+                                <input type="checkbox" onchange="toggleTask(this)" class="w-6 h-6 rounded-full border-2 border-[#597445]">
+                                <span class="text-md md:text-lg">Atur suhu AC ke 24°C</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 bg-white/30 rounded-2xl cursor-pointer hover:bg-white/50 transition-all">
+                                <input type="checkbox" onchange="toggleTask(this)" class="w-6 h-6 rounded-full border-2 border-[#597445]">
+                                <span class="text-md md:text-lg">Cabut charger jika tidak dipakai</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 bg-white/30 rounded-2xl cursor-pointer hover:bg-white/50 transition-all">
+                                <input type="checkbox" onchange="toggleTask(this)" class="w-6 h-6 rounded-full border-2 border-[#597445]">
+                                <span class="text-md md:text-lg">Gunakan tumbler sendiri</span>
+                            </label>
+                            <label class="flex items-center gap-4 p-4 bg-white/30 rounded-2xl cursor-pointer hover:bg-white/50 transition-all">
+                                <input type="checkbox" onchange="toggleTask(this)" class="w-6 h-6 rounded-full border-2 border-[#597445]">
+                                <span class="text-md md:text-lg">Bawa tas belanja sendiri</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+        <footer class="mt-16 text-center opacity-50 text-sm pb-8">
+            Created with 💚 for a Better Future
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

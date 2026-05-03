@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeafyStep🌿</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGASI -->
+    <nav class="fixed w-full z-50 p-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass-card px-8 py-4">
+            <div class="text-md md:text-xl lg:text-2xl font-black tracking-tighter">Leafy<span class="text-[#597445]">Step🌿</span></div>
+            <div class="hidden md:flex gap-10 font-semibold text-sm opacity-70">
+                <a href="#about" class="hover:text-[#597445] transition-colors">Mengapa Penting?</a>
+                <a href="#how" class="hover:text-[#597445] transition-colors">Cara Kerja</a>
+                <a href="#impact-dashboard" class="hover:text-[#597445] transition-colors">Progress</a>
+            </div>
+            <a href="calculator.html" class="btn-primary px-6 py-2 rounded-full text-sm font-semibold">Mulai Hitung</a>
+        </div>
+    </nav>
+
+<!-- HERO SEC -->
+    <section class="min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-[#597445]/10 text-[#597445] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">karena bumi cuma satu!</span>
+                <h1 class="text-5xl md:text-6xl lg:text-6xl font-black mt-6 leading-none">
+                    Jejak Kecil, <span class="gradient-text">Dampak Besar.</span>
+                </h1>
+                <p class="text-md mt-8 opacity-70 leading-relaxed max-w-md">
+                    Setiap aktivitas harianmu meninggalkan jejak di bumi. LeafyStep membantumu melacak, memahami, dan meminimalisir emisi karbon dengan cara yang mudah dan praktis.
+                </p>
+                <div class="flex gap-4 mt-10">
+                    <a href="calculator.html" 
+                    class="btn-primary inline-block px-4 py-3 text-sm md:px-5 md:py-3 md:text-base lg:px-6 lg:py-4 lg:text-lg rounded-2xl font-bold">
+                        Hitung Sekarang
+                    </a>
+                
+                    <a href="#about" 
+                    class="bg-white border-2 border-[#597445] text-[#597445] inline-block px-4 py-3 text-sm md:px-5 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg rounded-2xl font-bold hover:bg-[#F1F8E8] transition-all">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 bg-[#597445]/20 rounded-full blur-3xl absolute -z-10"></div>
+                <img src="https://plus.unsplash.com/premium_vector-1724465763282-a4b03c3d9a27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJlZXN8ZW58MHx8MHx8fDA%3D"
+                alt="Illustration" class="w-100 h-100 max-w-md animate-pulse hidden lg:block">
+            </div>
+        </div>
+    </section>
+
+<!-- ABOUT -->
+<section id="about" class="py-14 md:py-24 px-6 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            
+            <div class="lg:w-1/3">
+                <h2 class="text-4xl font-black text-[#597445] mb-8">Kenapa Ini Penting?</h2>
+            
+                <div class="bg-[#FFE3D8] border-l-4 border-red-600 p-6 rounded-r-2xl mb-8">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-red-600 text-xl">⚠️</span>
+                        <h4 class="font-bold text-red-600 uppercase text-xs tracking-widest">Peringatan Emisi Karbon</h4>
+                    </div>
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        Emisi karbon global terus meningkat setiap tahun. Tanpa tindakan nyata, dampaknya akan semakin terasa pada lingkungan dan kesehatan kita.
+                    </p>
+                </div>
+                
+                <p class="text-md opacity-60 leading-relaxed">
+                    Krisis iklim adalah masalah data yang kompleks. Dengan mengukur dampak kita, kita mengubah ketidaktahuan menjadi pemberdayaan yang terfokus.
+                </p>
+            </div>
+
+            <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-6">
+         
+                <div class="bg-[#F1F8E8] p-10 rounded-[40px] flex flex-col justify-center min-h-[250px] hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-6">🌁</div>
+                    <h3 class="text-2xl font-bold mb-4">Pemanasan Global</h3>
+                    <p class="text-sm opacity-70 leading-relaxed">Penyebab utama meningkatnya suhu bumi yang memicu berbagai bencana alam global.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-[#0f2a1d] via-[#1B3022] to-[#2e5a3a]  p-10 rounded-[40px] text-white flex flex-col justify-end min-h-[250px] lg:row-span-2 hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-6">🤝🏻</div>
+                    <h4 class="text-2xl font-bold mb-4">Tanggung jawab Bersama</h4>
+                    <p class="text-sm opacity-70 mb-6">Perubahan besar dimulai dari langkah kecil individu. Dengan melacak emisi, kamu sudah berkontribusi.</p>
+                </div>
+
+                <div class="bg-[#F1F8E8] p-10 rounded-[40px] flex flex-col justify-center min-h-[250px] hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-6">📉</div>
+                    <h3 class="text-2xl font-bold mb-4">Kesadaran Diri</h3>
+                    <p class="text-sm opacity-70 leading-relaxed">Banyak dari kita tidak sadar bahwa penggunaan perangkat harian berdampak besar pada emisi.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="py-24 px-6 bg-[#F1F8E8]">
+    <div class="max-w-6xl mx-auto">
+        
+        <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#597445]">Bagaimana Kami Menghitung?</h2>
+            <p class="text-md md:text-lg opacity-80 mt-4 max-w-2xl mx-auto leading-relaxed">
+                Proses tiga langkah kami menyederhanakan data lingkungan yang kompleks menjadi perubahan hidup yang dapat ditindaklanjuti.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            <div class="p-4 md:p-6 rounded-3xl bg-white hover:scale-105 transition-transform">
+                <div class="text-4xl mb-6">🚗</div>
+                <h3 class="text-lg md:text-xl font-bold mb-4">Input Transportasi</h3>
+                <p class="text-md opacity-70">Catat perjalanan harian Anda menggunakan motor atau mobil. Kami menggunakan koefisien emisi standar untuk memberikan estimasi akurat berdasarkan jarak tempuh.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-[#F1F8E8] text-xs font-semibold rounded-full uppercase tracking-wider">Motor: 0.1</span>
+                    <span class="px-3 py-1 bg-[#F1F8E8] text-xs font-semibold rounded-full uppercase tracking-wider">Mobil: 0.2</span>
+                </div>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-white hover:scale-105 transition-transform">
+                <div class="text-4xl mb-6">❄️</div>
+                <h3 class="text-lg md:text-xl font-bold mb-4">Penggunaan AC</h3>
+                <p class="text-md opacity-70">Masukkan durasi penggunaan AC di rumah atau kantor Anda. Perhitungan kami mempertimbangkan emisi rata-rata per jam penggunaan alat pendingin ruangan.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-[#F1F8E8] text-xs font-semibold rounded-full uppercase tracking-wider">AC: 0.5</span>
+                </div>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-white hover:scale-105 transition-transform">
+                <div class="text-4xl mb-6">💻</div>
+                <h3 class="text-lg md:text-xl font-bold mb-4">Aktivitas Laptop</h3>
+                <p class="text-md opacity-70">Tambahkan waktu yang Anda habiskan bekerja dengan laptop. Ini membantu melacak jejak karbon digital kecil namun konstan dari aktivitas harian Anda.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-[#F1F8E8] text-xs font-semibold rounded-full uppercase tracking-wider">Laptop: 0.05</span>
+                </div>
+            </div>
+        </div> 
+        </div>
+    </div>
+</section>
+
+<!-- DAMPAK NYATA -->
+<section id="impact-dashboard" class="py-24 px-6 bg-[#F8FAF8]">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="mb-16 relative">
+            <h2 class="text-4xl md:text-5xl font-black text-[#1B3022] leading-tight">Dampak Nyata<br>Langkah Kecilmu.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <div class="order-1 lg:col-span-5 bg-[#1B3022] rounded-[50px] p-10 text-white relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+                <div class="relative z-10">
+                    <span class="px-4 py-1 border border-white/20 rounded-full text-[10px] uppercase tracking-widest opacity-60">Progress kamu</span>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-8 mb-6">72% Menuju<br>Target Ramah lingkungan</h3>
+                </div>
+                
+                <div class="relative w-32 h-32 mb-4 z-10">
+                    <svg class="w-full h-full transform -rotate-90">
+                        <circle cx="64" cy="64" r="50" stroke="currentColor" stroke-width="12" fill="transparent" class="text-white/10" />
+                        <circle cx="64" cy="64" r="50" stroke="currentColor" stroke-width="12" fill="transparent" stroke-dasharray="314" stroke-dashoffset="88" class="text-[#8DFF91]" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center font-bold text-xl">72%</div>
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#597445] rounded-full blur-[80px] opacity-50"></div>
+            </div>
+
+            <div class="order-2 lg:order-2 lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-6">
+                
+                <div class="bg-[#FFE3D8] rounded-[40px] p-6 md:p-8 relative overflow-hidden">
+                    <h4 class="font-black text-lg md:text-xl mb-3 text-[#1B3022]">Tips Cerdas 💡</h4>
+                    <p class="text-sm text-[#1B3022]/80">Matikan laptop saat istirahat makan siang untuk menghemat 0.05kg karbon harianmu.</p>
+                </div>
+
+                <div class="bg-white border border-[#1B3022]/5 shadow-sm rounded-[40px] p-6 md:p-8 flex-grow">
+                    <h4 class="font-bold text-sm uppercase tracking-widest opacity-40 mb-6">Insight Cepat</h4>
+                    <ul class="space-y-3 md:space-y-5">
+    
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2 md:pb-4">
+                            <span class="text-xs md:text-sm">Karbon Offset</span>
+                            <span class="font-black text-sm md:text-lg text-[#597445]">12.4</span>
+                        </li>
+                    
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2 md:pb-4">
+                            <span class="text-xs md:text-sm">Daur Ulang</span>
+                            <span class="font-black text-sm md:text-lg text-[#597445]">
+                                850 <span class="text-[8px] md:text-[10px]">LBS</span>
+                            </span>
+                        </li>
+                    
+                        <li class="flex justify-between items-center">
+                            <span class="text-xs md:text-sm">Peringkat Eco</span>
+                            <span class="bg-[#C1F2B0] px-2 py-[2px] md:px-3 md:py-1 rounded-md md:rounded-lg font-black text-xs md:text-sm text-[#1B3022]">
+                                A+
+                            </span>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+
+            <div class="order-3 lg:order-3 lg:col-span-3 bg-[#F1F8E8] rounded-[50px] p-8 flex flex-col justify-between group hover:bg-[#597445] transition-colors duration-500 min-h-[250px] lg:min-h-full">
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">📍</div>
+                <div class="mt-10 lg:mt-0">
+                    <h3 class="font-black text-xl group-responsive-text group-hover:text-white transition-colors">Info<br>Sekitar</h3>
+                    <p class="text-xs md:text-sm mt-3 opacity-80 group-hover:text-white/100">Temukan komunitas hijau di sekitarmu.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- END -->
+    <section class="py-24 px-8 md:px-20">
+        <div class="max-w-6xl mx-auto bg-[#597445] rounded-[48px] p-12 md:p-24 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-8">Siap Mengurangi <br>Jejak Karbonmu?</h2>
+                <p class="text-md md:text-lg opacity-80 mb-12 max-w-xl mx-auto">Gabung bersama ribuan orang lainnya yang telah memulai gaya hidup lebih hijau mulai hari ini.</p>
+                <a href="calculator.html" class="bg-white text-[#597445] text-lg px-8 py-2 md:text-xl md:px-10 md:py-5 rounded-3xl font-black hover:scale-110 transition-transform inline-block">Mulai Hitung Gratis</a>
+            </div>
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full"></div>
+            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-white/10 rounded-full"></div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center opacity-40 text-sm">
+        &copy; 2026 LeafyStep🌿. Semua hak dilindungi. <br>
+        Dibuat untuk masa depan yang lebih hijau🪷.
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
